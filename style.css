@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.time-select, 
+.sound-picker,
+.player-container
+{
+    height: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.player-container{
+   position: relative;
+}
+
+.player-container svg{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* to be able to click on play button behing blue circle */
+    pointer-events: none;
+}
+
+.time-display{
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    font-size: 50px;
+}
+
+/* display rain background behind timer but allow button to be seen. */
+.vid-container{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    /* puts rain video it back behind timer and other buttons */
+    z-index: -10;
+}
+
+.time-select button,
+.sound-picker button{
+    color: white;
+    width: 30%;
+    height: 10%;
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    font: 5px;
+    transition: all 0.5s ease;
+}
+
+.time-select button:hover{
+    color: black;
+    background: white;
+}
+
+.sound-picker button{
+    border: none;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 30px;
+}
+
+/* get individual buttons from sound-picker */
+.sound-picker  button:nth-child(1){
+background: #4972a1
+}
+
+.sound-picker button:nth-child(2){
+background: #a14f49 ;
+}
+
+/* correct image placement (sun/cloud) from adding radius 30px in .sound-picker btn */
+.sound-picker button img{
+    height: 100%;
+}
