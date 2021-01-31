@@ -58,10 +58,10 @@
 
 .time-select button,
 .sound-picker button{
-    color: white;
+    color: black;
     width: 30%;
     height: 10%;
-    background: none;
+    background: rgb(204, 248, 242);
     border: 2px solid white;
     cursor: pointer;
     border-radius: 5px;
@@ -75,7 +75,7 @@
 }
 .time-select button:focus{
     color: white;
-    background: seagreen;
+    background: rgb(247, 219, 245);
 }
 
 
@@ -95,6 +95,10 @@ background: #4972a1
 .sound-picker button:nth-child(2){
 background: #a14f49 ;
 }
+
+.sound-picker button:nth-child(3){
+    background: #018145 ;
+    }
 
 /* correct image placement (sun/cloud) from adding radius 30px in .sound-picker btn */
 .sound-picker button img{

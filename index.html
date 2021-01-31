@@ -62,8 +62,9 @@
     </div>
      <div class="sound-picker">
          <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4" > <img src="./svg/rain.svg" alt="rain"> </button>
-         <button data-sound="./svg/beach.mp3" data-video="./svg/beach.mp4" ><img src="./svg/beach.svg" alt=""></button>
-     </div>
+         <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4" ><img src="./svg/beach.svg" alt="beach"></button>
+         <button data-sound="./sounds/chillout.mp3" data-video="./video/chillout.mp4" ><img src="./svg/chillout.svg" alt="beach"></button>
+        </div>
    </div>
 
 <script>
@@ -89,6 +90,15 @@ let fakeDuration = 600;
 // strokeDash array strokeDasoffset appearance of animation
 outline.style.strokeDasharray = outlineLength;
 outline.style.strokeDashoffset = outlineLength
+
+// pick diff sounds
+sounds.forEach(sound => {
+    sound.addEventListener('click', function(){
+        song.src = this.getAttribute('data-sound')
+        video.src = this.getAttribute('data-video')
+        checkPlaying(song)
+    })
+})
 
 //play sound(s)
 play.addEventListener('click', () => {
@@ -134,7 +144,7 @@ song.ontimeupdate = () => {
     let progress = outlineLength - (currentTime / fakeDuration) * outlineLength;
     outline.style.strokeDashoffset = progress
 
-    
+    // stop timer fromplaying after end of countdown    
     if(currentTime >= fakeDuration){
         song.pause()
         song.currentTime = 0
