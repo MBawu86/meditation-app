@@ -73,6 +73,11 @@
     color: black;
     background: white;
 }
+.time-select button:focus{
+    color: white;
+    background: seagreen;
+}
+
 
 .sound-picker button{
     border: none;
