@@ -84,12 +84,26 @@ const timeSelect = document.querySelectorAll('.time-select button')
 const outlineLength = outline.getTotalLength();
 console.log(outlineLength)
 
+
 //duration
 let fakeDuration = 600;
 
 // strokeDash array strokeDasoffset appearance of animation
 outline.style.strokeDasharray = outlineLength;
 outline.style.strokeDashoffset = outlineLength
+
+// function currentTime(){
+//     min = updateTime(min)
+//     sec = upDateTime(sec)
+// }
+
+// function updateTime(timeDisplay){
+// if (timeDisplay > 10){
+//     return '0' + timeDisplay
+// }else{
+//     return timeDisplay
+// }
+// }
 
 // pick diff sounds
 sounds.forEach(sound => {
