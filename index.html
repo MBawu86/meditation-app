@@ -122,7 +122,7 @@ play.addEventListener('click', () => {
 //select sound to play
 timeSelect.forEach(option => {
   option.addEventListener("click", function() {
-    fakeDuration = this.getAttribute("data-time");
+    Duration = this.getAttribute("data-time");
     // minutes / 60, seconds % 60
     timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)} `
 
