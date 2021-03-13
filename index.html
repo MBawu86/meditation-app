@@ -124,7 +124,7 @@ timeSelect.forEach(option => {
   option.addEventListener("click", function() {
     Duration = this.getAttribute("data-time");
     // minutes / 60, seconds % 60
-    timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)} `
+    timeDisplay.textContent = `${Math.floor(Duration / 60)}:${Math.floor(Duration % 60)} `
 
     
 })
@@ -146,7 +146,7 @@ const checkPlaying = song =>{
 //animate time
 song.ontimeupdate = () => {
     let currentTime = song.currentTime
-    let elapsed = fakeDuration - currentTime
+    let elapsed = Duration - currentTime
     //map.floor flattens number
     let seconds = Math.floor(elapsed % 60)
     let minutes = Math.floor(elapsed / 60)
@@ -155,11 +155,11 @@ song.ontimeupdate = () => {
     timeDisplay.textContent = `${minutes}:${seconds}`
     
     //animate circle
-    let progress = outlineLength - (currentTime / fakeDuration) * outlineLength;
+    let progress = outlineLength - (currentTime / Duration) * outlineLength;
     outline.style.strokeDashoffset = progress
 
     // stop timer fromplaying after end of countdown    
-    if(currentTime >= fakeDuration){
+    if(currentTime >= Duration){
         song.pause()
         song.currentTime = 0
         play.src = './svg/play.svg'
