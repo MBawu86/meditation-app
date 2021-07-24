@@ -19,8 +19,11 @@
             <button data-time = "120" >2 Minutes</button>
             <button data-time = '300'>5 Minutes</button>
             <button data-time = '600'>10 Minutes</button>
+        </div>
+        <div class= 'infinite'>
             <button infinity = '86400' > ∞ </button>
         </div>
+
     <div class="player-container">
         <audio class="song">                
             <source src="./sounds/rain.mp3">
@@ -101,6 +104,7 @@ outline.style.strokeDashoffset = outlineLength
 // function updateTime(timeDisplay){
 // if (timeDisplay > 10){
 //     return '0' + timeDisplay
+
 // }else{
 //     return timeDisplay
 // }
@@ -129,6 +133,12 @@ timeSelect.forEach(option => {
 
     
 })
+timeSelect.forEach(option => {
+    option.addEventlistener('clicl', function(){
+        Duration = this.getAttribute('infinity');
+        timeDisplay.textContent = ''
+    })
+})
 })
 
 //function to stop/play sound(s)
@@ -154,6 +164,7 @@ song.ontimeupdate = () => {
   
     //animate text
     timeDisplay.textContent = `${minutes}:${seconds}`
+    
     
     //animate circle
     let progress = outlineLength - (currentTime / Duration) * outlineLength;
