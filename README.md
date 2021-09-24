@@ -15,6 +15,7 @@ Three timer settings @ 2/5 minutes, 24 hours
 Three background themes with custom audio
 
 Next stages of development:
+Code for various screen sizes
 Toggle repeat button
 Add a customizable timer with user input
 Add additional backgrounds 
