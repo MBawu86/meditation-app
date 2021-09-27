@@ -104,3 +104,7 @@ background: #a14f49 ;
 .sound-picker button img{
     height: 100%;
 }
+
+.track-outline {
+    max-width: 100%
+}
