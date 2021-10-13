@@ -2,7 +2,9 @@
 Meditation App 
 
 HTML 
+
 CSS
+
 Javascript
 
 Get your peace on @
@@ -16,7 +18,7 @@ Three background themes with custom audio
 
 Next stages of development:
 
-Code for various screen sizes
+Code for responsive screen sizing
 
 Toggle repeat button
 
